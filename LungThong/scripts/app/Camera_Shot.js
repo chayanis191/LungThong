@@ -1,13 +1,7 @@
 
-
- 
 function id(element) {
     return document.getElementById(element);
 }
-
-
-
-
 
 function camera(){}
 
@@ -36,7 +30,7 @@ cameraApp.prototype={
     
     _capturePhoto: function() {
         var that = this;
-        
+        var el = "8V8ecMpYsIMnoghp";
         // Take picture using device camera and retrieve image as base64-encoded string.
         navigator.camera.getPicture(function(){
             that._onPhotoDataSuccess.apply(that,arguments);
@@ -93,9 +87,17 @@ cameraApp.prototype={
     _onPhotoDataSuccess: function(imageData) {
         var smallImage = document.getElementById('smallImage');
         smallImage.style.display = 'block';
+        var el = new Everlive('8V8ecMpYsIMnoghp');
+        var uploadUrl = el.Files.getUploadUrl();
     
         // Show the captured photo.
         smallImage.src = "data:image/jpeg;base64," + imageData;
+        options = new FileUploadOptions();
+        options.fileKey = imageData
+        options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+        options.mimeType = "image/png";
+        ft = new FileTransfer();
+        ft.upload(imageURI, uploadUrl, options)
     },
     
     _onPhotoURISuccess: function(imageURI) {
