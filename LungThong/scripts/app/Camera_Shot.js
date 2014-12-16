@@ -1,4 +1,6 @@
+var app = app || {};
 
+app.Camera = (function () 
 function id(element) {
     return document.getElementById(element);
 }
@@ -103,4 +105,6 @@ cameraApp.prototype={
     _onFail: function(message) {
         alert(message);
     }
+    
 }
+}());
