@@ -19,7 +19,7 @@ var appSettings = {
     },
 
     facebook: {
-        appId: '385511104930849', // Put your Facebook App ID here
+        appId: '385511104930849', LungThong
         redirectUri: 'https://www.facebook.com/connect/login_success.html' // Put your Facebook Redirect URI here
     },
 
