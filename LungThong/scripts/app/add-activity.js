@@ -44,6 +44,9 @@ app.AddActivity = (function () {
                 activities.sync();
             }
         };
+       onphotoButtonClick: function(){
+           window.location = "views/Camera_upload.html";
+       }
         
         return {
             init: init,
