@@ -1,4 +1,5 @@
 .cf {
+
     zoom: 1;
 }
 
@@ -321,7 +322,7 @@
 }
 
 #friendsApp .welcome-scrn .group-wrp .oauth .oauth-item {
-    float: left;
+    float: center;
     margin: 0 1%;
     width: 23%;
 }
