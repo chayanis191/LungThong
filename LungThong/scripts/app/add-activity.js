@@ -44,10 +44,10 @@ app.AddActivity = (function () {
                 });
                 
                 activities.sync();
+                app.mobileApp.navigate('views/Camera_Shot.html');
             }
         };
-       
-        
+           
         return {
             init: init,
             show: show,
