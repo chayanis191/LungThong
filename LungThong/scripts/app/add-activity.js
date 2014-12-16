@@ -35,10 +35,10 @@ app.AddActivity = (function () {
                 // Adding new activity to Activities model
                 var activities = app.Activities.activities;
                 var activity = activities.add();
-                
+                var picture = picture.add();
                 activity.Text = $newStatus.val();
                 activity.UserId = app.Users.currentUser.get('data').Id;
-                
+                picture.
                 activities.one('sync', function () {
                     app.mobileApp.navigate('#:back');
                 });
@@ -46,9 +46,7 @@ app.AddActivity = (function () {
                 activities.sync();
             }
         };
-       onphotoButtonClick: function(){
-           window.location = "Camera_shot.js";
-       }
+       
         
         return {
             init: init,
