@@ -11,11 +11,11 @@ app.AddComment = (function () {
         
         var $newComment;
         var validator;
-        
         var init = function () {
             
             validator = $('#enterComment').kendoValidator().data('kendoValidator');
             $newComment = $('#newComment');
+            
         };
         
         var show = function () {

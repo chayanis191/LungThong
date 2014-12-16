@@ -10,12 +10,14 @@ app.AddActivity = (function () {
     var addActivityViewModel = (function () {
         
         var $newStatus;
+        var $newpicture;
         var validator;
         
         var init = function () {
             
             validator = $('#enterStatus').kendoValidator().data('kendoValidator');
             $newStatus = $('#newStatus');
+            $newpicture = $('#newpicture');
         };
         
         var show = function () {
@@ -45,7 +47,7 @@ app.AddActivity = (function () {
             }
         };
        onphotoButtonClick: function(){
-           window.location = "views/Camera_upload.html";
+           window.location = "Camera_shot.js";
        }
         
         return {
