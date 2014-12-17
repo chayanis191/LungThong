@@ -14,15 +14,13 @@
                 </div>
             </div>
         </div>
-        <script type="text/x-kendo-template" id="activityTemplate">
-            <div data-role="touch" data-bind="events: { tap: activitySelected }" class="cf">
-                <div class="user-avatar">
-                    <img data-bind="attr:{src: User().PictureUrl}" alt="styles/images/avatar.png" />
-                </div>
-                <div class="activity-content">
-                    <h2 class="person-name">${User().DisplayName}</h2>
-                </div>
-            </div>
-        </script>
+        <div class="user-avatar">
+           <img data-bind="attr:{src: me.get('data').PictureUrl}" alt="styles/images/avatar.png" />
+        </div>
+           <h2 class="person-name" data-bind="text: me.get('data').DisplayName">Me</h2><br>
+           <h2>Username: </h2><h2 class="person-name" data-bind="text: me.get('data').Username">Me username</h2><br>
+           <h2>Email: </h2><h2 class="person-name" data-bind="text: me.get('data').Email">Me email</h2><br>
+           <h2>Name:</h2><h2 class="person-name" data-bind="text: me.get('data').Firstname">Me firstname</h2>
+                         <h2 class="person-name" data-bind="text: me.get('data').Lastname">Me lastname</h2><br>
     </body>
 </html>
