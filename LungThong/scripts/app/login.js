@@ -60,12 +60,12 @@ app.Login = (function () {
 
             var username = $loginUsername.val();
             var password = $loginPassword.val();
-            
             var el = new Everlive('8V8ecMpYsIMnoghp');
             el.Users.login(username, // username
                 password, // password
                 function (data) {
-                    alert(JSON.stringify(data));
+                   var obj = JSON.stringify(data);
+                   alert(obj);
                 },
                 function(error){
                     alert(JSON.stringify(error));
