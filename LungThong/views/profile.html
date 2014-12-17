@@ -4,7 +4,6 @@
     <head>
     </head>
     <body>
-        <div>
             <div data-role="header">
                 <div data-role="navbar">
                     My profile
@@ -12,15 +11,14 @@
                     <a class="nav-button nav-button-add hide-text" data-align="right" data-role="button" href="">Edit profile</a>
                 </div>
             </div>
-            <div class="user-avatar">
-                <img data-bind="attr:{src: me.get('data').PictureUrl}" alt="styles/images/avatar.png" />
-            </div>
-               <h2 class="person-name" data-bind="text: me.get('data').DisplayName">Me</h2><br>
-               <h2>Username: </h2><h2 class="person-name" data-bind="text: me.get('data').Username">Me username</h2><br>
-               <h2>Email: </h2><h2 class="person-name" data-bind="text: me.get('data').Email">Me email</h2><br>
-               <h2>Name:</h2><h2 class="person-name" data-bind="text: me.get('data').Firstname">Me firstname</h2>
-                             <h2 class="person-name" data-bind="text: me.get('data').Lastname">Me lastname</h2><br>
-           
-        </div>
+            <script>
+                var el = new Everlive('8V8ecMpYsIMnoghp');
+                    el.Users.currentUser()
+                    .then(function (data) {
+                         alert(JSON.stringify(data));},
+                    function(error){
+                         alert(JSON.stringify(error));
+                    });
+            </script>
     </body>
 </html>
