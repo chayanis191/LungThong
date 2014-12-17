@@ -13,7 +13,7 @@
             </div>
             <script>
                 var el = new Everlive('8V8ecMpYsIMnoghp');
-                    el.Users.currentUser()
+                    el.Users.get()
                     .then(function (data) {
                          alert(JSON.stringify(data));},
                     function(error){
