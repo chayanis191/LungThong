@@ -6,7 +6,8 @@ var appSettings = {
 
     everlive: {
         apiKey: '8V8ecMpYsIMnoghp', // Put your Backend Services API key here
-        scheme: 'http'
+        url: '//api.everlive.com/v1/',
+        scheme: 'https'
     },
 
     eqatec: {
