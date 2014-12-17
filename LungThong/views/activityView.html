@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" />
-       <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
-       <link href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.common.min.css" rel="stylesheet" />
-       <link href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.default.min.css" rel="stylesheet" />
-       <link rel="stylesheet" href="../styles/kiui-0.0.5.css" />
-       <link rel="stylesheet" href="../styles/kiui-0.0.5.min.css" />
-       <link rel="stylesheet" href="../styles/main.min.css" />
-       <script src="../scripts/app/kiui-0.0.5.js"></script>
-       <script src="../scripts/app/kiui-0.0.5.min.js"></script>
-       <script src="http://cdn.kendostatic.com/2013.3.1119/js/kendo.web.min.js"></script>
-       <script src="http://cdn.kendostatic.com/2013.3.1119/js/cultures/kendo.culture.it-IT.min.js"></script>
     </head>
     <body>
         <div data-role="view" id="single-activity" data-layout="default" class="activity-view" data-init="app.Activity.init" data-show="app.Activity.show">
@@ -35,13 +24,6 @@
                         <ul id="comments-listview"></ul>
                     </div>
                 </div> 
-            </div>
-            <div id="widgets_rating_demo">
-                          <div class="paragraph" >
-                                <label>Rating:</label>
-                                <input type="number" data-bind="value: rating" min=0 max=5 />
-                                <span class="help-inline">Please rate this.</span>
-                          </div>
             </div>
             <div data-role="footer">
                 <a data-role="button" data-bind="visible: isVisible" data-click="app.Activity.remove" class="btn btn-delete">ลบ</a>
