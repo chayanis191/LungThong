@@ -44,10 +44,10 @@ app.AddActivity = (function () {
                 });
                 
                 activities.sync();
-                
             }
         };
-           
+       
+        
         return {
             init: init,
             show: show,

@@ -60,16 +60,6 @@ app.Login = (function () {
 
             var username = $loginUsername.val();
             var password = $loginPassword.val();
-            var el = new Everlive('8V8ecMpYsIMnoghp');
-            el.Users.login(username, // username
-                password, // password
-                function (data) {
-                   var obj = JSON.stringify(data);
-                   alert(obj);
-                },
-                function(error){
-                    alert(JSON.stringify(error));
-                });
 
             // Authenticate using the username and password
             app.everlive.Users.login(username, password)
@@ -78,6 +68,7 @@ app.Login = (function () {
                 if (isAnalytics) {
                     analytics.TrackFeature('Login.Regular');
                 }
+
                 return app.Users.load();
             })
             .then(function () {
