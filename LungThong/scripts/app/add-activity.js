@@ -10,7 +10,7 @@ app.AddActivity = (function () {
     var addActivityViewModel = (function () {
         
         var $newStatus;
-        //var $newpicture;
+        var $newpicture;
         var validator;
         
         var init = function () {
@@ -35,10 +35,8 @@ app.AddActivity = (function () {
                 // Adding new activity to Activities model
                 var activities = app.Activities.activities;
                 var activity = activities.add();
-                //var picture = picture.add();
                 activity.Text = $newStatus.val();
                 activity.UserId = app.Users.currentUser.get('data').Id;
-                //picture.
                 activities.one('sync', function () {
                     app.mobileApp.navigate('#:back');
                 });
